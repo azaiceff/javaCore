@@ -1,6 +1,6 @@
 package classObject;
 
-class Course {
+class Course{
     private final int idCourse;
     private static int idCounter = 0;
     private final int treadmill;
