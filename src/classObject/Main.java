@@ -1,7 +1,7 @@
 package classObject;
 
 public class Main {
-    public static void main(String[] args){
+    public static void main(String[] args) {
 
         Organizer.newCourses();
         Organizer.searchPeople();

@@ -1,6 +1,6 @@
 package classObject;
 
-class Entrant{
+class Entrant {
     private final int id;
     private static int idCounter = 0;
     private final String name;

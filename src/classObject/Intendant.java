@@ -1,6 +1,6 @@
 package classObject;
 
-class Intendant{
+class Intendant {
     private static int teamCount = 0;
     private static int winCount = 0;
     private static int disqualificationCount = 0;

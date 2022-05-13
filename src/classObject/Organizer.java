@@ -1,7 +1,7 @@
 package classObject;
 
 import java.util.Random;
-class Organizer {
+class Organizer{
     private static final Random random = new Random();
     private static final String[] name = {
             "Андрей", "Никита", "Лев", "Александра", "Юлия", "Мария",
