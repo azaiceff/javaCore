@@ -28,7 +28,7 @@ class Organizer {
             /*System.out.println(entrant[i].getId() + " " + entrant[i].getName());*/
         }
     }
-    static void creatingTeams(){
+    static void creatingTeams() {
         int count = 0;
         int indexTeamArr = 0;
         Entrant[] forTeam = new Entrant[MIN_TEAM];
