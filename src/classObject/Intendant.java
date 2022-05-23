@@ -1,6 +1,6 @@
 package classObject;
 
-class Intendant {
+class Intendant{
     private static int teamCount = 0;
     private static int winCount = 0;
     private static int disqualificationCount = 0;
@@ -33,14 +33,12 @@ class Intendant {
         int Treadmill = course.getTreadmill();
         if(maxRun == 0){
             disqualification();
-            disqualificationCount++;
             return false;
         }
         if(maxRun < Treadmill){
             System.out.println(entrant.getName() + " смог пробежать только " + maxRun
             + "м. из " + Treadmill);
             outOf();
-            dropoutCount++;
             return false;
         }else {
             System.out.println(entrant.getName() + " успешно пробежал дистанцию и передал эстафету другому");
@@ -52,14 +50,12 @@ class Intendant {
         int waterBarrier = course.getWaterBarrier();
         if(maxSwim == 0){
             disqualification();
-            disqualificationCount++;
             return false;
         }
         if(maxSwim < waterBarrier){
             System.out.println(entrant.getName() + " смог проплыть только " + maxSwim
                     + "м. из " + waterBarrier);
             outOf();
-            dropoutCount++;
             return false;
         }else {
             System.out.println(entrant.getName() + " успешно преодолел водную преграду и передал эстафету другому");
@@ -71,14 +67,12 @@ class Intendant {
         int wall = course.getWall();
         if(maxJump == 0){
             disqualification();
-            disqualificationCount++;
             return false;
         }
         if(maxJump < wall){
             System.out.println(entrant.getName() + " смог прыгнуть только на " + maxJump
                     + "м. из " + wall);
             outOf();
-            dropoutCount++;
             return false;
         }else {
             System.out.println(entrant.getName() + " успешно перепрыгнул и передал эстафету другому");
@@ -90,14 +84,12 @@ class Intendant {
         int bikePath = course.getBikePath();
         if(maxBicycleCross == 0){
             disqualification();
-            disqualificationCount++;
             return false;
         }
         if(maxBicycleCross < bikePath){
             System.out.println(entrant.getName() + " проехал только " + maxBicycleCross
                     + "м. из " + bikePath);
             outOf();
-            dropoutCount++;
             return false;
         }else {
             System.out.println(entrant.getName() + " успешно доехал до финиша");
@@ -105,9 +97,11 @@ class Intendant {
         }
     }
     private static void disqualification(){
+        disqualificationCount++;
         System.out.println("Команда дисквалифицирована!");
     }
     private static void outOf(){
+        dropoutCount++;
         System.out.println("Команда выбывает из соревнования!");
     }
     private static void luck(Team team){
