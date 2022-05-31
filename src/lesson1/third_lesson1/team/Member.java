@@ -1,8 +1,8 @@
-package third_lesson1.team;
+package lesson1.third_lesson1.team;
 
-import third_lesson1.actions.Organizer;
-import third_lesson1.course.Obstacle;
-import third_lesson1.course.Obstacle_Enum;
+import lesson1.third_lesson1.actions.Organizer;
+import lesson1.third_lesson1.course.Obstacle;
+import lesson1.third_lesson1.course.Obstacle_Enum;
 //Класс участника команды
 public final class Member {
     private final int id;

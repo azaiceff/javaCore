@@ -1,6 +1,5 @@
-package third_lesson1.course;
+package lesson1.third_lesson1.course;
 
-import third_lesson1.actions.Organizer;
 //Препятствия
 public final class Obstacle {
     private final int id;

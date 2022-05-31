@@ -1,4 +1,4 @@
-package classObject;
+package lesson1.first_lesson1;
 
 class Intendant{
     private static int teamCount = 0;

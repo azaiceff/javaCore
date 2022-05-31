@@ -1,4 +1,4 @@
-package second_lesson1;
+package lesson1.second_lesson1;
 
 class Course {
 
