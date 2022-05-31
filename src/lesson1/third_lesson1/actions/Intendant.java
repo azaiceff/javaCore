@@ -1,8 +1,8 @@
-package third_lesson1.actions;
+package lesson1.third_lesson1.actions;
 
-import third_lesson1.course.Course;
-import third_lesson1.team.Status;
-import third_lesson1.team.Team;
+import lesson1.third_lesson1.course.Course;
+import lesson1.third_lesson1.team.Status;
+import lesson1.third_lesson1.team.Team;
 //Класс Интендант следит за ходом соревнований и управляет ими
 public final class Intendant {
     //метод принимает на вход команду и полосу препятствий, которую должна пройти команда

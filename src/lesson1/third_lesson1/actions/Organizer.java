@@ -1,9 +1,9 @@
-package third_lesson1.actions;
-import third_lesson1.course.Course;
-import third_lesson1.course.Obstacle;
-import third_lesson1.course.Obstacle_Enum;
-import third_lesson1.team.Member;
-import third_lesson1.team.Team;
+package lesson1.third_lesson1.actions;
+import lesson1.third_lesson1.course.Course;
+import lesson1.third_lesson1.course.Obstacle;
+import lesson1.third_lesson1.course.Obstacle_Enum;
+import lesson1.third_lesson1.team.Member;
+import lesson1.third_lesson1.team.Team;
 
 import java.util.Random;
 //Класс Органайзер создает препятствия и формирует команды. Идея о создании классов Органайзер и Интендант не моя.

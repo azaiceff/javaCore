@@ -1,8 +1,8 @@
-package third_lesson1.team;
+package lesson1.third_lesson1.team;
 
-import third_lesson1.actions.Organizer;
+import lesson1.third_lesson1.actions.Organizer;
 
-//import static classObject.Organizer.nameTeam;
+//import static lesson1.classObject.Organizer.nameTeam;
 
 //Класс команды
 public final class Team {

@@ -1,4 +1,4 @@
-package classObject;
+package lesson1.first_lesson1;
 
 class Entrant{
     private final int id;

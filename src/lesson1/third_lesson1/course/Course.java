@@ -1,4 +1,4 @@
-package third_lesson1.course;
+package lesson1.third_lesson1.course;
 
 import java.util.Arrays;
 //Класс полоса препятствий. Полоса препятствий - неодушевленный объект и ему все равно кто по нему бегает.

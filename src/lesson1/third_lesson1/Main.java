@@ -1,9 +1,9 @@
-package third_lesson1;
+package lesson1.third_lesson1;
 
-import third_lesson1.actions.Intendant;
-import third_lesson1.actions.Organizer;
-import third_lesson1.course.Course;
-import third_lesson1.team.Team;
+import lesson1.third_lesson1.actions.Intendant;
+import lesson1.third_lesson1.actions.Organizer;
+import lesson1.third_lesson1.course.Course;
+import lesson1.third_lesson1.team.Team;
 
 public class Main {
     public static void main(String[] args) {
