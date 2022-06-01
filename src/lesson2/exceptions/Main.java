@@ -4,40 +4,31 @@ import java.util.Random;
 
 public class Main {
     private final static Random random = new Random();
-
+    private static final int SIZE_ARRAY = 4;
     public static void main(String[] args) {
         int count = 0;
         String[][][][] ar = getStrArr();
         System.out.println(("Всего двумерных массивов: "
                 + ar.length * ar[ar.length - 1].length + " шт.\n").toUpperCase());
-
         for (String[][][] arr: ar) {
             for (String[][] array: arr) {
                 System.out.println("Массив № " + ++count);
-                System.out.println("Сумма всех чисел массива: " + sumArray(array));
+                try {
+                    System.out.println("Сумма всех чисел массива: " + sumArray(array));
+                } catch (MyArraySizeException e) {
+                    System.out.println(e.getMessage());
+                    System.out.println("Обработали - поехали дальше)");
+                }
                 System.out.println();
             }
         }
     }
-    private static int sumArray(String[][] strArr){
-        if (strArr.length != 4 ){
-            try {
-                throw new RuntimeException();
-            } catch (RuntimeException e) {
-                System.out.println("Массив не того размера [" + strArr.length + "][]");
-                return 0;
-            }
+    private static int sumArray(String[][] strArr) throws MyArraySizeException{
+        if (strArr.length != SIZE_ARRAY || strArr[0].length != SIZE_ARRAY){
+           throw new MyArraySizeException("Массив не того размера [" + strArr.length + "][" + strArr[0].length + "]");
         }
         int sum = 0;
         for (int i = 0; i < strArr.length ; i++) {
-            if (strArr[i].length != 4) {
-                try {
-                    throw new RuntimeException();
-                } catch (RuntimeException e) {
-                    System.out.println("Массив не того размера [4][" + strArr[i].length + "]");
-                    return 0;
-                }
-            }
             for (int j = 0; j < strArr[i].length; j++) {
                 try {
                     if (strArr[i][j] == null){
@@ -45,10 +36,14 @@ public class Main {
                     }
                     sum += Integer.parseInt(strArr[i][j]);
                 } catch (NumberFormatException e) {
-                    System.out.println("NumberFormatException Array[" + i + "][" + j
-                            + "] = " + strArr[i][j]);
+                    try {
+                        throw new MyArrayDataException("Элемент массива [" + i + "][" + j + "] = "  + strArr[i][j] +
+                                " невозможно привести к числу");
+                    } catch (MyArrayDataException ex) {
+                        System.out.println(ex.getMessage());
+                    }
                 } catch (NullPointerException e) {
-                    System.out.println("NullPointerException Array[" + i + "][" + j
+                    System.out.println("NullPointerException. Элемент массива [" + i + "][" + j
                             + "] = " + strArr[i][j]);
                 }
             }
