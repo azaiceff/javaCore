@@ -29,6 +29,12 @@ public class Box<T extends Fruit> {
         }
         return weightBox;
     }
+    //Метод, который позволяет пересыпать фрукты из текущей коробки в другую.
+    //Помним про сортировку фруктов: нельзя яблоки высыпать в коробку с апельсинами.
+    //Соответственно, в текущей коробке фруктов не остается, а в другую перекидываются
+    //объекты, которые были в первой
+    // так как я использовал коробки типа Fruit, а в такие коробки я могу положить любой фрукт. Поэтому, для
+    // соблюдения условия задачи, добавил защиту в метод, что бы коробки не смешивались.
     public void pourOver(Box box) throws MyException {
         if(this == box){
             throw new MyException("Нельзя пересыпать коробку саму в себя!");
@@ -40,8 +46,8 @@ public class Box<T extends Fruit> {
             System.out.println("До");
             System.out.println(this);
             System.out.println(box);
-            this.boxFruit.addAll(box.boxFruit);
-            box.boxFruit.clear();
+            box.boxFruit.addAll(this.boxFruit);
+            this.boxFruit.clear();
             System.out.println("После");
             System.out.println(this);
             System.out.println(box);

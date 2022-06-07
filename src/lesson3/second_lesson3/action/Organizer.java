@@ -34,6 +34,10 @@ public class Organizer {
             return getListFruit(new Orange());
         }
     }
+    // Метод возвращает ArrayList типа Fruit, в такой ArrayList я могу положить любой фрукт, что противоречит
+    // условию ДЗ (в одну коробку нельзя сложить и яблоки, и апельсины). С другой стороны, если бы я создавал листы
+    // типа Apple, Orange и тд, то все было бы четко по заданию. Но в коде я везде сделал защиту от случая смешивания
+    // фруктов в коробке, тем самым усложнил себе задачу для тренировки.)
     private static ArrayList<? extends Fruit> getListFruit(Fruit fruit){
         ArrayList<Fruit> list = new ArrayList<>();
         for (int i = 0; i < getRandomInt(5,5); i++) {
