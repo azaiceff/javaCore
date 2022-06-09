@@ -1,9 +1,10 @@
 package lesson2.exceptions;
 
 import java.util.Random;
-
+// Здесь два варианта решения методы sumArray() и sumArrayTS
+// Если Вы считаете, что я излишне усложняю, то проверти только вариант sumArrayTS.
 public class Main {
-    private final static Random random = new Random();
+    private static final Random random = new Random();
     private static final int SIZE_ARRAY = 4;
     public static void main(String[] args) {
 
@@ -12,6 +13,18 @@ public class Main {
         System.out.println(("Всего двумерных массивов: "
                 + stringArray.length * stringArray[stringArray.length - 1].length + " шт.\n").toUpperCase());
         //Начинаю перебирать массивы)
+        System.out.println("Без возможности посчитать сумму в случае: \nMyArraySizeException | MyArrayDataException e");
+        for (String[][][] arr : stringArray) {
+            for (String[][] array : arr) {
+                System.out.println();
+                try {
+                    System.out.println("Сумма всех чисел массива: " + sumArrayTS(array) + "\nПоехали дальше!");
+                } catch (MyArraySizeException | MyArrayDataException e) {
+                    System.out.println(e.getMessage());
+                }
+            }
+        }
+        System.out.println("\nВ случае MyArrayDataException, расчет суммы не прерывается");
         int count = 0; // посчитаю в ручную, сколько прошло массивов через наш метод.
         for (String[][][] arr: stringArray) {
             for (String[][] array: arr) {// Здесь пошли двумерные массивы, их сумму и будем считать
@@ -62,6 +75,21 @@ public class Main {
         }
         return sum;
     }
+    private static int sumArrayTS(String[][] strArr) throws MyArraySizeException, MyArrayDataException{
+        checkSizeArray(strArr);
+        int sum = 0;
+        for (int i = 0; i < strArr.length ; i++) {
+            for (int j = 0; j < strArr[i].length; j++) {
+                try {
+                    sum += Integer.parseInt(strArr[i][j]);
+                } catch (NumberFormatException e) {
+                        throw new MyArrayDataException("Элемент массива [" + i + "][" + j + "] = "  + strArr[i][j] +
+                                " невозможно привести к числу");
+                }
+            }
+        }
+        return sum;
+    }
     //Метод проверки соот. массива заданным параметрам.
     private static void checkSizeArray(String[][] array) throws MyArraySizeException{
         System.out.println("Размер: " + array.length + " х " + array[0].length);
@@ -86,7 +114,7 @@ public class Main {
                 arr[i][j] = array;
                 for (int k = 0; k < array.length; k++) {
                     for (int l = 0; l < array[k].length; l++) {
-                        if(random.nextInt(10) == 0){
+                        if(random.nextInt(20) == 0){
                             arr[i][j][k][l] = String.valueOf(getRandomInt()) + getRandomChar() + getRandomInt();
                         }else if (random.nextInt(10) != 0) {
                             arr[i][j][k][l] = String.valueOf(random.nextInt(40));
@@ -96,7 +124,6 @@ public class Main {
                         // arr[i][j][k][l] = null;}
                         // Но мне, что-то такой вид не понравился, решил просто сделать комментарий.
                         // Этот элемент изначально уже имеет значение null.
-
                     }
                 }
             }
@@ -112,7 +139,7 @@ public class Main {
     }
     private static int getLen(){
         int len = 4;
-        if(random.nextInt(6) == 0){
+        if(random.nextInt(10) == 0){
             len = 5;
         }
         return len;
