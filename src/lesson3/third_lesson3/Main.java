@@ -44,6 +44,7 @@ public class Main {
         System.out.println(appleBox1 + " -> " + appleBox2);
         //appleBox3.pourOver(orangeBox2);// сделать не получится, джинерики не дают этого сделать
         System.out.println(orangeBox1 + " -> " + orangeBox2);
+        // orangeBox1.pourOver(appleBox2); //не работает
         orangeBox1.pourOver(orangeBox2); //работает
         System.out.println(orangeBox1 + " -> " + orangeBox2);
     }

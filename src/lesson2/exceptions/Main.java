@@ -116,7 +116,7 @@ public class Main {
                     for (int l = 0; l < array[k].length; l++) {
                         if(random.nextInt(20) == 0){
                             arr[i][j][k][l] = String.valueOf(getRandomInt()) + getRandomChar() + getRandomInt();
-                        }else if (random.nextInt(10) != 0) {
+                        }else if (random.nextInt(20) != 0) {
                             arr[i][j][k][l] = String.valueOf(random.nextInt(40));
                         }
                         //Для наглядности сначала сделал так:
