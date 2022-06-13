@@ -21,16 +21,14 @@ public class Main {
     }
 
     private static int summary(int[][] intArray, int a, int b) {
-        System.out.println("i = " + a + ", j = " + b);
+        System.out.println("i = " + a + ", j = " + b + " элемент: " + intArray[a][b]);
         int sum = 0;
         for (int i = 0; i < 3; i++) {
             int c = a - 1 + i;
-            if (c < 0) c = intArray.length - 1;
-            if (c > intArray.length - 1) c = 0;
+            c = (c + intArray.length) % intArray.length;
             for (int j = 0; j < 3; j++) {
                 int d = b - 1 + j;
-                if (d < 0) d = intArray[i].length - 1;
-                if (d > intArray[i].length - 1) d = 0;
+                d = (d + intArray[i].length) % intArray[i].length;
                 sum += intArray[c][d];
             }
         }
