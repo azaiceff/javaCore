@@ -25,7 +25,6 @@ public class Main {
         }
     }
 
-
     private static int summary(int[][] intArray, int a, int b) {
         System.out.println("i = " + a + ", j = " + b + " элемент: " + intArray[a][b]);
         int sum = 0;
@@ -35,11 +34,11 @@ public class Main {
             for (int j = 0; j < 3; j++) {
                 int d = b - 1 + j;
                 d = (d + intArray[i].length) % intArray[i].length;
-                if (c == a && d == b) continue;
+                //if (c == a && d == b) continue;
                 sum += intArray[c][d];
             }
         }
-        return sum;
+        return sum - intArray[a][b];
     }
 
     private static int[][][] getIntegerArrays() {
@@ -48,7 +47,7 @@ public class Main {
             int[][] ar = new int[random.nextInt(4) + 3][random.nextInt(4) + 3];
             for (int j = 0; j < ar.length; j++) {
                 for (int k = 0; k < ar[j].length; k++) {
-                    ar[j][k] = random.nextInt(5) ;
+                    ar[j][k] = random.nextInt(5);
                     arr[i] = ar;
                 }
             }
