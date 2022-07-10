@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class AccuWeatherProvider implements WeatherProvider {
 
-    private static final String BASE_HOST = "dataservice.accuweather.com";
+    private static final String BASE_HOST = "https://dataservice.accuweather.com";
     private static final String FORECAST_ENDPOINT = "forecasts";
     private static final String CURRENT_CONDITIONS_ENDPOINT = "currentconditions";
     private static final String API_VERSION = "v1";
@@ -65,7 +65,7 @@ public class AccuWeatherProvider implements WeatherProvider {
         return (fahrenheit - 32.0) * 5.0 / 9.0;
     }
     public String getUrl (String ... path){
-        return  UriComponentsBuilder.fromHttpUrl("https://dataservice.accuweather.com")
+        return  UriComponentsBuilder.fromHttpUrl(BASE_HOST)
                 .pathSegment(path)
                 .queryParam("apikey", API_KEY)
                 .build().toString();

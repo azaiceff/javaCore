@@ -26,6 +26,6 @@ public final class ApplicationGlobalState {
     }
 
     public String getApiKey() {
-        return "el3AAzloCoP5bAIweoh2tz4ptVlr3FSk";
+        return "QsZvVpF2e193v7yBMyW4UDUcjG8pe96c";
     }
 }
