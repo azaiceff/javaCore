@@ -1,9 +1,10 @@
-package lesson7.project;
+package lesson7_8.project;
 
 public final class ApplicationGlobalState {
 
     private static ApplicationGlobalState INSTANCE;
     private String selectedCity = null;
+
 
     private ApplicationGlobalState() {
     }
@@ -24,8 +25,11 @@ public final class ApplicationGlobalState {
     public void setSelectedCity(String selectedCity) {
         this.selectedCity = selectedCity;
     }
+    public String getDbFileName() {
+        return "application.db";
+    }
 
     public String getApiKey() {
-        return "QsZvVpF2e193v7yBMyW4UDUcjG8pe96c";
+        return "nlUNvwa5rJNPjucEH9OHn4QxKHnKeHH1";
     }
 }
