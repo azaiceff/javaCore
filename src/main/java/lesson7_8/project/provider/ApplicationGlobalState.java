@@ -1,4 +1,4 @@
-package lesson7_8.project;
+package lesson7_8.project.provider;
 
 public final class ApplicationGlobalState {
 

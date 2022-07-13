@@ -1,5 +1,7 @@
 package lesson7_8.project;
 
+import lesson7_8.project.provider.ApplicationGlobalState;
+
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.Scanner;
