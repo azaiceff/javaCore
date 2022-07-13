@@ -1,7 +1,9 @@
-package lesson7_8.project;
+package lesson7_8.project.repository;
 
+import lesson7_8.project.ApplicationGlobalState;
 import lesson7_8.project.enitity.WeatherData;
 import lesson7_8.project.enitity.WeatherResponse;
+import lesson7_8.project.repository.DatabaseRepository;
 
 import java.sql.*;
 import java.util.ArrayList;

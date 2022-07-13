@@ -5,6 +5,9 @@ package lesson7_8.project;
 import lesson7_8.project.enitity.WeatherData;
 import lesson7_8.project.enums.Functionality;
 import lesson7_8.project.enums.Periods;
+import lesson7_8.project.provider.AccuWeatherProvider;
+import lesson7_8.project.provider.WeatherProvider;
+import lesson7_8.project.repository.DatabaseRepositorySQLiteImpl;
 
 import java.io.IOException;
 import java.sql.SQLException;

@@ -1,4 +1,4 @@
-package lesson7_8.project;
+package lesson7_8.project.repository;
 
 import lesson7_8.project.enitity.WeatherData;
 import lesson7_8.project.enitity.WeatherResponse;

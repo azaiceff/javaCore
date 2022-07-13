@@ -1,10 +1,12 @@
-package lesson7_8.project;
+package lesson7_8.project.provider;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import lesson7_8.project.ApplicationGlobalState;
 import lesson7_8.project.enitity.WeatherData;
 import lesson7_8.project.enitity.WeatherResponse;
 import lesson7_8.project.enums.Periods;
+import lesson7_8.project.repository.DatabaseRepositorySQLiteImpl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
