@@ -19,7 +19,7 @@ public class DatabaseRepositorySQLiteImpl implements DatabaseRepository {
         }
     }
 
-    String filename = null;
+    String filename = "null";
     String createTableQuery = "CREATE TABLE IF NOT EXISTS weather (\n" +
             "id INTEGER PRIMARY KEY AUTOINCREMENT,\n" +
             "city TEXT NOT NULL,\n" +

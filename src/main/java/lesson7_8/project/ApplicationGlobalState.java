@@ -26,7 +26,7 @@ public final class ApplicationGlobalState {
         this.selectedCity = selectedCity;
     }
     public String getDbFileName() {
-        return "application.db";
+        return "src/main/java/lesson7_8/project/application.db";
     }
 
     public String getApiKey() {
