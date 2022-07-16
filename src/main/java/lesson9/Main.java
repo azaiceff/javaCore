@@ -40,8 +40,8 @@ public class Main {
         System.out.println("******************");
         AtomicInteger count = new AtomicInteger();
         List<Course> courses = studentList.stream().flatMap(student -> student.getCourses().stream())
-                .sorted(Comparator.comparing(Course::toString))
                 .distinct()
+                .sorted(Comparator.comparing(Course::toString))
                 .toList();
         courses.forEach((course) -> System.out.println(count.incrementAndGet() + " " + course));
         System.out.println("Итого, у нас преподают по " + courses.size() + " профессиям.");
