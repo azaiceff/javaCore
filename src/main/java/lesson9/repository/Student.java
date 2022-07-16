@@ -20,11 +20,11 @@ public class Student {
     public static List<Student> getNewStudentList() throws SQLException {
         List<Student> students = new ArrayList<>();
         DatabaseRepositorySQLite DB = new DatabaseRepositorySQLite();
-        for (int i = 0; i < DB.getCountFromTableDB("students"); i++) {
+        int count =  DB.getCountFromTableDB("students");
+        for (int i = 0; i < count; i++) {
             String[] nameStudentFromDB = DB.getNameStudentFromDB(i + 1).split(" ");
             List<Course> courses = DB.getListCoursesFromDB(i + 1);
-            Student student = new Student(nameStudentFromDB[1],nameStudentFromDB[0], courses);
-            students.add(student);
+            students.add(new Student(nameStudentFromDB[1],nameStudentFromDB[0], courses));
         }
         return students;
     }
