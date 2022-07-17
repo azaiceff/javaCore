@@ -2,20 +2,12 @@ package lesson1.third_lesson1.team;
 
 import lesson1.third_lesson1.actions.Organizer;
 
-//import static lesson1.classObject.Organizer.nameTeam;
-
 //Класс команды
 public final class Team {
     private final int id;
     private static int countId = 0;
     private final String name;
     private final Member[] members;
-    //Немного ознакомился с принципами динамического программирования. Ввод переменной status, позволяет сохранить
-    // промежуточное состояние команды. В случае необходимости, уже не нужно повторное вычисление состояния
-    // команды, а можно просто обратиться к данной переменной. Это экономит ресурсы вычислительной техники. Также
-    // идею инициализации id(команды, участника и тд) в конструкторе, мне подкинуло понимание этих принципов.
-    // Добавление статической переменной, которая уже содержит в себе последний номер id позволяет мне не выполнять
-    // какие-то дополнительные вычисления.
     private Status status;
     public Team(String name, Member[] members) {
         this.id = ++countId;

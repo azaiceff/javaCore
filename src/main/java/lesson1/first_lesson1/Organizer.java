@@ -25,7 +25,6 @@ class Organizer {
     static void searchPeople(){
         for (int i = 0; i < entrant.length; i++) {
             entrant[i] = new Entrant(name[getRandomInt(name.length)]);
-            /*System.out.println(entrant[i].getId() + " " + entrant[i].getName());*/
         }
     }
     static void creatingTeams() {

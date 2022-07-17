@@ -37,10 +37,10 @@ class Team{
             System.out.println("Команда решила выпить за знакомство и не участвовать в соревнованиях))");
             return false;
         }else {
-            /*System.out.println("""
+            System.out.println("""
                     Мы — спортивная братва!
                     За нас болейте, детвора!
-                    """);*/
+                    """);
             return true;
         }
     }
