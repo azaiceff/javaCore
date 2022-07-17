@@ -51,7 +51,7 @@ public class Box<T extends Fruit> {
             System.out.println("После");
             System.out.println(this);
             System.out.println(box);
-       }
+        }
     }
     @Override
     public boolean equals(Object obj) {

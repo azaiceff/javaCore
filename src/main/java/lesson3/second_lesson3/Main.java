@@ -23,9 +23,7 @@ public class Main {
         for (int i = 0; i < getFruitBoxes().size(); i++) {
             int j = 1;
             for (j += i; j < getFruitBoxes().size(); j++) {
-                if(getFruitBoxes().get(i).equals(getFruitBoxes().get(j))){//Использовал переопределение метода equals.
-                    // В тз конечно сказано создать метод compare(), в предыдущем варианте решения так и сделал.
-                    // Здесь просто пробую альтернативные варианты решения поставленной задачи.
+                if(getFruitBoxes().get(i).equals(getFruitBoxes().get(j))){
                     count++;
                     System.out.println("Коробка для " + getFruitBoxes().get(i).getType() + " № "
                             + getFruitBoxes().get(i).getId()
@@ -47,11 +45,6 @@ public class Main {
                     box.pourOver(secondBox);
                 } catch (MyException e) {
                    //System.out.println(e.getMessage());
-                    //Закомментировал вывод сообщений об исключениях, что-бы не загромождать консоль.
-                    // Можно включить и визуально проследить как осуществлялся перебор вариантов и какие
-                    // при этом вылетали ошибки)
-                    // Пробовал так-же решить эту задачу с помощью if-else-if, тоже хорошо все получается, но с
-                    // пробросом исключений, как-то интереснее получилось, оставил такой вариант.
                 }
             }
         }

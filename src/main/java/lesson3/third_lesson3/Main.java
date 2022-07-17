@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Задание №1");
         swappingElementsArrays();
         System.out.println("Задание №2");
-        Box<Apple> appleBox1 = new Box<>(new ArrayList<>());//Для хранения фруктов внутри коробки можно использовать ArrayList;
+        Box<Apple> appleBox1 = new Box<>(new ArrayList<>());
         for (int i = 0; i < random.nextInt(3) + 2; i++) {
             addApple(appleBox1);
         }
@@ -49,7 +49,6 @@ public class Main {
         System.out.println(orangeBox1 + " -> " + orangeBox2);
     }
 
-    //Не забываем про метод добавления фрукта в коробку.
     private static void addApple(Box<Apple> box) {
         box.boxFruit().add(new Apple());
     }
