@@ -16,8 +16,8 @@ public class FirstTask {
             }
             str.append(set).append("-").append(count).append("шт. ");
         }
-        str.append("\n");
-        System.out.println(str);
+        str.append("\n*******************\n");
+        System.out.print(str);
     }
 
     private static Set<String> returnSetString(String[] strArr) {

@@ -59,7 +59,6 @@ public class AccuWeatherProvider implements WeatherProvider {
                     .build();
 
             Response response = client.newCall(request).execute();
-            assert response.body() != null;
             JsonNode jsonResponse = objectMapper.readTree(response.body().string()).get("DailyForecasts");
 
             List<WeatherData> weatherDataList = new ArrayList<>();
